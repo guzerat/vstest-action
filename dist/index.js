@@ -4846,12 +4846,12 @@ function run() {
             testFiles.forEach(function (file) {
                 core.debug(`${file}`);
             });
-            core.info(`Downloading test tools...`);
-            let workerZipPath = path.join(__dirname, 'win-x64.zip');
-            yield exec.exec(`powershell Invoke-WebRequest -Uri "https://www.nuget.org/api/v2/package/Microsoft.TestPlatform/17.10.0" -OutFile ${workerZipPath}`);
-            core.info(`Unzipping test tools...`);
-            core.debug(`workerZipPath is ${workerZipPath}`);
-            yield exec.exec(`powershell Expand-Archive -Path ${workerZipPath} -DestinationPath ${__dirname}`);
+            //core.info(`Downloading test tools...`);
+            //let workerZipPath = path.join(__dirname, 'win-x64.zip');
+            //yield exec.exec(`powershell Invoke-WebRequest -Uri "https://www.nuget.org/api/v2/package/Microsoft.TestPlatform/17.10.0" -OutFile ${workerZipPath}`);
+            //core.info(`Unzipping test tools...`);
+            //core.debug(`workerZipPath is ${workerZipPath}`);
+            //yield exec.exec(`powershell Expand-Archive -Path ${workerZipPath} -DestinationPath ${__dirname}`);
             let vsTestPath = getVsTestPath_1.getVsTestPath();
             core.debug(`VsTestPath: ${vsTestPath}`);
             let args = getArguments_1.getArguments();
